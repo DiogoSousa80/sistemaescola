@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/java.ececultavel/java.ececultavel.iml" filepath="$PROJECT_DIR$/java.ececultavel/java.ececultavel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/primeiro-programa-java.iml" filepath="$PROJECT_DIR$/.idea/primeiro-programa-java.iml" />
+    </modules>
+  </component>
+</project>

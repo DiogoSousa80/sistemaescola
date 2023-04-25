@@ -18,14 +18,18 @@ public class PrimeiraClasseJava {
         String matricula = JOptionPane.showInputDialog("Qual a data de matrícula?");
         String escola = JOptionPane.showInputDialog("Qual sua instituição de ensino?");
         String serie = JOptionPane.showInputDialog("Qual sua serie?");
+        String disciplina1 = JOptionPane.showInputDialog("Disciplina 1?");
         String nota1 = JOptionPane.showInputDialog("Nota 1");
+        String disciplina2 = JOptionPane.showInputDialog("Disciplina 2?");
         String nota2 = JOptionPane.showInputDialog("Nota 2");
+        String disciplina3 = JOptionPane.showInputDialog("Disciplina 3?");
         String nota3 = JOptionPane.showInputDialog("Nota 3");
+        String disciplina4 = JOptionPane.showInputDialog("Disciplina 4?");
         String nota4 = JOptionPane.showInputDialog("Nota 4");
 
 
         Aluno aluno1 = new Aluno();
-        aluno1.setNome("João da Silva");
+        aluno1.setNome(nome);
         aluno1.setIdade(Integer.valueOf(idade));
         aluno1.setDataNascimento(dataNascimento);
         aluno1.setRegistroGeral(rg);
@@ -35,10 +39,16 @@ public class PrimeiraClasseJava {
         aluno1.setDataMatricula(matricula);
         aluno1.setNomeEscola(escola);
         aluno1.setSerieMatriculado(serie);
+
         aluno1.setNota1(Double.parseDouble(nota1));
         aluno1.setNota2(Double.parseDouble(nota2));
         aluno1.setNota3(Double.parseDouble(nota3));
         aluno1.setNota4(Double.parseDouble(nota4));
+
+        aluno1.setDisciplina1(disciplina1);
+        aluno1.setDisciplina2(disciplina2);
+        aluno1.setDisciplina3(disciplina3);
+        aluno1.setDisciplina4(disciplina4);
 
         System.out.println("Nome Aluno:  " + aluno1.getNome());
         System.out.println("Sua Idade: " + aluno1.getIdade());
@@ -54,7 +64,10 @@ public class PrimeiraClasseJava {
         System.out.println("Resultado = " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
         System.out.println("Resultado 2 = " + aluno1.getAlunoAprovado2());
 
-        System.out.println("===================================================");
+
+        System.out.println(aluno1.toString());
+        System.out.println("Média do aluno " + aluno1.getMediaNota());
+        System.out.println("Resultado" + aluno1.getAlunoAprovado2());
 
     }
 

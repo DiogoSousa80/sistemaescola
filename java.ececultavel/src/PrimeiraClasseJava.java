@@ -24,7 +24,7 @@ public class PrimeiraClasseJava {
         String nota4 = JOptionPane.showInputDialog("Nota 4");
 
 
-        Aluno aluno1 = new Aluno(); /*Aqui vai ser o João*/
+        Aluno aluno1 = new Aluno();
         aluno1.setNome("João da Silva");
         aluno1.setIdade(Integer.valueOf(idade));
         aluno1.setDataNascimento(dataNascimento);

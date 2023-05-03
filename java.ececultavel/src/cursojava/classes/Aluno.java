@@ -17,63 +17,6 @@ public class Aluno {
     private String nomeEscola;
     private String serieMatriculado;
 
-    private double nota1;
-    private String disciplina1;
-    private double nota2;
-    private String  disciplina2;
-    private double nota3;
-    private String disciplina3;
-    private double nota4;
-    private String disciplina4;
-
-
-    public String getDisciplina1() {
-        return disciplina1;
-    }
-
-    public void setDisciplina1(String disciplina1) {
-        this.disciplina1 = disciplina1;
-    }
-
-    public String getDisciplina2() {
-        return disciplina2;
-    }
-
-    public void setDisciplina2(String disciplina2) {
-        this.disciplina2 = disciplina2;
-    }
-
-    public String getDisciplina3() {
-        return disciplina3;
-    }
-
-    public void setDisciplina3(String disciplina3) {
-        this.disciplina3 = disciplina3;
-    }
-
-    public String getDisciplina4() {
-        return disciplina4;
-    }
-
-    public void setDisciplina4(String disciplina4) {
-        this.disciplina4 = disciplina4;
-    }
-
-    public Aluno () {/*Cria os dados na memória - sendo padrão o Java*/
-
-    }
-    public Aluno(String nomePadrao){
-        nome = nomePadrao;
-
-    }
-    public Aluno (String nomePadrao, int idadePadrao){
-        nome = nomePadrao;
-        idade = idadePadrao;
-    }
-
-    /*Metodos SETTER e GETTERS do objeto*/
-    /*SET é para adicionar ou receber dados para os atributos*/
-    /*GET é para registrar ou obter o valor do atributo*/
 
     public String getNome() {
         return nome;
@@ -155,35 +98,29 @@ public class Aluno {
         this.serieMatriculado = serieMatriculado;
     }
 
+    private Disciplina disciplina = new Disciplina();
 
-
-    public double getNota1() {
-        return nota1;
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
     }
 
-    public void setNota1(double nota1) {
-        this.nota1 = nota1;
+    public Disciplina getDisciplina() {
+        return disciplina;
     }
 
-    public double getNota2() {
-        return nota2;
+    public Aluno () {/*Cria os dados na memória - sendo padrão o Java*/
+
+    }
+    public Aluno(String nomePadrao){
+        nome = nomePadrao;
+
+    }
+    public Aluno (String nomePadrao, int idadePadrao){
+        nome = nomePadrao;
+        idade = idadePadrao;
     }
 
-    public void setNota2(double nota2) {
-        this.nota2 = nota2;
-    }
 
-    public double getNota3() {
-        return nota3;
-    }
-
-    public void setNota3(double nota3) {
-        this.nota3 = nota3;
-    }
-
-    public double getNota4() {
-        return nota4;
-    }
 
     public void setNota4(double nota4) {
         this.nota4 = nota4;
@@ -209,27 +146,4 @@ public class Aluno {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Aluno{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", dataNascimento='" + dataNascimento + '\'' +
-                ", registroGeral='" + registroGeral + '\'' +
-                ", numeroCpf='" + numeroCpf + '\'' +
-                ", nomeMae='" + nomeMae + '\'' +
-                ", nomePai='" + nomePai + '\'' +
-                ", dataMatricula='" + dataMatricula + '\'' +
-                ", nomeEscola='" + nomeEscola + '\'' +
-                ", serieMatriculado='" + serieMatriculado + '\'' +
-                ", nota1=" + nota1 +
-                ", disciplina1='" + disciplina1 + '\'' +
-                ", nota2=" + nota2 +
-                ", disciplina2='" + disciplina2 + '\'' +
-                ", nota3=" + nota3 +
-                ", disciplina3='" + disciplina3 + '\'' +
-                ", nota4=" + nota4 +
-                ", disciplina4='" + disciplina4 + '\'' +
-                '}';
-    }
 }

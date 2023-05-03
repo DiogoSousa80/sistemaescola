@@ -3,6 +3,8 @@ package cursojava.classes;
 //
 /*Classe que representa o Aluno*/
 
+import java.util.Objects;
+
 public class Aluno {
 
     /*Esses são os atributos don aluno*/
@@ -121,12 +123,8 @@ public class Aluno {
     }
 
 
-
-    public void setNota4(double nota4) {
-        this.nota4 = nota4;
-    }
     public double getMediaNota(){
-        return (nota1 + nota2 + nota3 + nota4) / 4;
+        return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) / 4;
     }
 
     /*Metodo que retona true para aprovado e false para reprovad.*/
@@ -146,4 +144,33 @@ public class Aluno {
         }
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Aluno aluno)) return false;
+        return getIdade() == aluno.getIdade() && Objects.equals(getNome(), aluno.getNome()) && Objects.equals(getDataNascimento(), aluno.getDataNascimento()) && Objects.equals(getRegistroGeral(), aluno.getRegistroGeral()) && Objects.equals(getNumeroCpf(), aluno.getNumeroCpf()) && Objects.equals(getNomeMae(), aluno.getNomeMae()) && Objects.equals(getNomePai(), aluno.getNomePai()) && Objects.equals(getDataMatricula(), aluno.getDataMatricula()) && Objects.equals(getNomeEscola(), aluno.getNomeEscola()) && Objects.equals(getSerieMatriculado(), aluno.getSerieMatriculado()) && Objects.equals(getDisciplina(), aluno.getDisciplina());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNome(), getIdade(), getDataNascimento(), getRegistroGeral(), getNumeroCpf(), getNomeMae(), getNomePai(), getDataMatricula(), getNomeEscola(), getSerieMatriculado(), getDisciplina());
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", registroGeral='" + registroGeral + '\'' +
+                ", numeroCpf='" + numeroCpf + '\'' +
+                ", nomeMae='" + nomeMae + '\'' +
+                ", nomePai='" + nomePai + '\'' +
+                ", dataMatricula='" + dataMatricula + '\'' +
+                ", nomeEscola='" + nomeEscola + '\'' +
+                ", serieMatriculado='" + serieMatriculado + '\'' +
+                ", disciplina=" + disciplina +
+                '}';
+    }
 }

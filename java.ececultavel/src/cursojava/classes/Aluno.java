@@ -3,6 +3,8 @@ package cursojava.classes;
 //
 /*Classe que representa o Aluno*/
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Aluno {
@@ -19,6 +21,16 @@ public class Aluno {
     private String nomeEscola;
     private String serieMatriculado;
 
+    private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
+
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
 
     public String getNome() {
         return nome;
@@ -124,7 +136,12 @@ public class Aluno {
 
 
     public double getMediaNota(){
-        return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) / 4;
+        double somaNotas  = 0.0;
+        for (Disciplina disciplina : disciplinas){
+            somaNotas += disciplina.getNota();
+        }
+
+        return somaNotas / disciplinas.size();
     }
 
     /*Metodo que retona true para aprovado e false para reprovad.*/
@@ -170,7 +187,6 @@ public class Aluno {
                 ", dataMatricula='" + dataMatricula + '\'' +
                 ", nomeEscola='" + nomeEscola + '\'' +
                 ", serieMatriculado='" + serieMatriculado + '\'' +
-                ", disciplina=" + disciplina +
                 '}';
     }
 }

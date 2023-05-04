@@ -34,30 +34,18 @@ public class PrimeiraClasseJava {
         aluno1.setNomeEscola(escola);
         aluno1.setSerieMatriculado(serie);
 
+        for (int pos = 1; pos <= 4; pos++){
 
-        Disciplina disciplina1 = new Disciplina();
-        disciplina1.setDisciplina("Banco de Dados");
-        disciplina1.setNota(90);
+            String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina?" +pos+  " ? ");
+            String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina?" +pos+  " ? ");
 
-        aluno1.getDisciplinas().add(disciplina1);
+            Disciplina disciplina = new Disciplina();
+            disciplina.setDisciplina(nomeDisciplina);
+            disciplina.setNota(Double.valueOf(notaDisciplina));
 
-        Disciplina disciplina2 = new Disciplina();
-        disciplina2.setDisciplina("JavaScript");
-        disciplina2.setNota(80);
+            aluno1.getDisciplinas().add(disciplina);
+        }
 
-        aluno1.getDisciplinas().add(disciplina2);
-
-        Disciplina disciplina3 = new Disciplina();
-        disciplina3.setDisciplina("Java");
-        disciplina3.setNota(70);
-
-        aluno1.getDisciplinas().add(disciplina3);
-
-        Disciplina disciplina4 = new Disciplina();
-        disciplina4.setDisciplina("Golang");
-        disciplina4.setNota(90);
-
-        aluno1.getDisciplinas().add(disciplina4);
 
         System.out.println("Nome Aluno:  " + aluno1.getNome());
         System.out.println("Sua Idade: " + aluno1.getIdade());
@@ -74,7 +62,7 @@ public class PrimeiraClasseJava {
         System.out.println("Resultado 2 = " + aluno1.getAlunoAprovado2());
 
 
-        System.out.println(aluno1.toString());
+        System.out.println(aluno1);
         System.out.println("Média do aluno " + aluno1.getMediaNota());
         System.out.println("Resultado" + aluno1.getAlunoAprovado2());
 
